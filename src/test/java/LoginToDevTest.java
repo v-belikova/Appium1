@@ -34,6 +34,8 @@ public class LoginToDevTest extends Methods {
         loginPage.passwordInput.setValue("123456");
         loginPage.buttonLogin.click();
 
+        softAssert.assertTrue(myProfilePage.string1Hello.isDisplayed(), "Hello, Lik123");
+
     }
 
     @Epic(value = "LoginTest")
