@@ -35,5 +35,23 @@ public class MyProfilePage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='Newsfeed']")
     public MobileElement NewsfeedButton;
 
+    //@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Hello, Viktoria123']")
+    public MobileElement stringHello;
+
+    //@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Log in or register']")
+    public MobileElement stringLoginOrReg;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='User name: Lik123']")
+    public MobileElement stringUserNameReg;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='User email: Lik@mail.ru']")
+    public MobileElement stringUserEmailReg;
+
+
+
+
+
+
 
 }

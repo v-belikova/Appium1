@@ -43,7 +43,7 @@ public class RegistrationPage {
 
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[1]/androidx.cardview.widget.CardView/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.ImageView[1]")
-    @iOSXCUITFindBy(id = "//XCUIElementTypeImage[@name='Фотография, 09 августа 2012 г., 1:29 AM']")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeImage[normalize-space(name()='Фотография, 10 ')][3]")
     public MobileElement avatarChoicePictureReg;
 
     @AndroidFindBy(xpath = "net.dunice.it.newsfeed:id/crop_image_menu_crop")
@@ -55,6 +55,12 @@ public class RegistrationPage {
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Cancel']")
     public MobileElement avatarChoiceCancel2Reg;
+
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='Email Password LOGIN REGISTER If you don't have an account'])[15]")
+    public MobileElement touchReg;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Log in or register']")
+    public MobileElement errorEmail;
 
 
 }

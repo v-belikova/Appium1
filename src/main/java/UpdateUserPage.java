@@ -12,11 +12,11 @@ public class UpdateUserPage {
     }
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.EditText")
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='123Q@mail.ru'])[2]/XCUIElementTypeTextField")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='Long@mail.ru'])[2]/XCUIElementTypeTextField")
     public MobileElement emailUpdateInput;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.EditText")
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='Viktoria123'])[2]/XCUIElementTypeTextField")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='Long'])[2]/XCUIElementTypeTextField")
     public MobileElement nameUpdateInput;
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]")
@@ -44,5 +44,8 @@ public class UpdateUserPage {
     @AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc='Navigate up']")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Cancel']")
     public MobileElement avatarChoiceCancel2Reg;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='USERNAME_SIZE_NOT_VALID']")
+    public MobileElement errorUpdate;
 
 }

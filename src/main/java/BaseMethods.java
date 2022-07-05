@@ -46,8 +46,6 @@ public class BaseMethods {
                 capabilities.setCapability("platformName", "Android");
                 capabilities.setCapability("appium:deviceName", "pixel_5");
                 capabilities.setCapability("appium:app", "/Users/belikova/Downloads/newsfeed.apk");
-                capabilities.setCapability("unicodeKeyboard", true);
-                capabilities.setCapability("resetKeyboard", true);
 
 
                 driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
@@ -62,6 +60,8 @@ public class BaseMethods {
                 capabilities.setCapability("appium:app", "/Users/belikova/Downloads/newsfeed.app");
                 capabilities.setCapability("appium:autoAcceptAlerts", "true");
                 capabilities.setCapability("appium:autoGrantPermissions", "true");
+                capabilities.setCapability("appium:unicodeKeyboard", true);
+                capabilities.setCapability("appium:resetKeyboard", true);
 
                 driver = new IOSDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
                 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

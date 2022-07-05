@@ -23,6 +23,18 @@ public class LoginPage extends Methods {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='LOGIN']")
     public MobileElement buttonLogin;
 
+    //@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='user email must be a well-formed email address']")
+    public MobileElement errorLogin;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='password not valid']")
+    public MobileElement errorPassword;
+
+
+
+
+
+
 
 }
 
