@@ -31,11 +31,5 @@ public class LoginPage extends Methods {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='password not valid']")
     public MobileElement errorPassword;
 
-
-
-
-
-
-
 }
 
