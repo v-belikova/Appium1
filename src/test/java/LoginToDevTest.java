@@ -53,8 +53,28 @@ public class LoginToDevTest extends Methods {
         loginPage.emailInput.setValue("Lik@");
         loginPage.passwordInput.setValue("123456");
         loginPage.buttonLogin.click();
+
         softAssert.assertTrue(loginPage.errorLogin.isDisplayed(), "user email must be a well-formed email address");
 
+    }
+
+    @Epic(value = "LoginTest")
+    @Feature("Login")
+    @Story("Not valid password")
+    @Description("User not login")
+    @Test
+    public void loginNegative2Test() throws InterruptedException {
+
+        LoginPage loginPage = new LoginPage(driver);
+        SoftAssert softAssert = new SoftAssert();
+
+        System.out.println(this.getClass().getName() + " " + "started!");
+
+        loginPage.emailInput.setValue("Lik@mail.ru");
+        loginPage.passwordInput.setValue("1234567");
+        loginPage.buttonLogin.click();
+
+        softAssert.assertTrue(loginPage.errorPassword.isDisplayed(), "password not valid");
 
     }
 }

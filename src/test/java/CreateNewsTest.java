@@ -29,11 +29,11 @@ public class CreateNewsTest extends Methods {
                 loginPage.buttonLogin.click();
                 myProfilePage.myProfileButton.click();
                 myProfilePage.newPostButton.click();
-                Thread.sleep(5000);
+                /*Thread.sleep(5000);
                 newsPostPage.titleInput.setValue("Hello");
                 newsPostPage.descriptionInput.setValue("Beautiful live");
                 newsPostPage.tagsInput.setValue("live is ....");
-                newsPostPage.saveButton.click();
+                newsPostPage.saveButton.click();*/
 
         }
 

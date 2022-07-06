@@ -46,6 +46,8 @@ public class BaseMethods {
                 capabilities.setCapability("platformName", "Android");
                 capabilities.setCapability("appium:deviceName", "pixel_5");
                 capabilities.setCapability("appium:app", "/Users/belikova/Downloads/newsfeed.apk");
+                capabilities.setCapability("appium:autoAcceptAlerts", "true");
+                capabilities.setCapability("appium:autoGrantPermissions", "true");
 
 
                 driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);

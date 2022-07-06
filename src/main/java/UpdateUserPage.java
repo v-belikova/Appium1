@@ -45,7 +45,16 @@ public class UpdateUserPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Cancel']")
     public MobileElement avatarChoiceCancel2Reg;
 
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='USERNAME_SIZE_NOT_VALID']")
     public MobileElement errorUpdate;
+
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='User name: Long']")
+    public MobileElement nameDisplayUpdateInput;
+
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='User email: Long@mail.ru']")
+    public MobileElement emailDisplayUpdateInput;
 
 }

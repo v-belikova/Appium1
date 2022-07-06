@@ -29,7 +29,7 @@ public class InformUserTest  extends Methods  {
             myProfilePage.myProfileButton.click();
 
             softAssert.assertTrue(myProfilePage.stringUserNameReg.isDisplayed(), "User name: Lik123");
-            softAssert.assertTrue(myProfilePage.stringUserEmailReg.isDisplayed(), "User email: Lik@mail.ru");
+            //softAssert.assertTrue(myProfilePage.stringUserEmailReg.isDisplayed(), "User email: Lik@mail.ru");
 
         }
 
@@ -51,6 +51,7 @@ public class InformUserTest  extends Methods  {
             loginPage.emailInput.setValue("Lik@mail.ru");
             loginPage.passwordInput.setValue("1234567");
             loginPage.buttonLogin.click();
+
             softAssert.assertTrue(loginPage.errorPassword.isDisplayed(), "password not valid");
 
 

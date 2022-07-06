@@ -46,11 +46,10 @@ public class RegistrationPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeImage[normalize-space(name()='Фотография, 10 ')][3]")
     public MobileElement avatarChoicePictureReg;
 
-    @AndroidFindBy(xpath = "net.dunice.it.newsfeed:id/crop_image_menu_crop")
-    public MobileElement choicePicturesAvatar;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Choose']")
-    public MobileElement avatarChooseReg;
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView[3]")
+    public MobileElement choicePicturesAvatar;
 
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Cancel']")
@@ -59,6 +58,7 @@ public class RegistrationPage {
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='Email Password LOGIN REGISTER If you don't have an account'])[15]")
     public MobileElement touchReg;
 
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Log in or register']")
     public MobileElement errorEmail;
 
