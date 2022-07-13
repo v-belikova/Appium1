@@ -20,7 +20,7 @@ public class RegistrationTest extends Methods {
 
         RegistrationPage registrationPage = new RegistrationPage(driver);
         MyProfilePage myProfilePage = new MyProfilePage(driver);
-        SoftAssert softAssert = new SoftAssert();
+
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -38,7 +38,7 @@ public class RegistrationTest extends Methods {
         registrationPage.goBackButton.click();
         Thread.sleep(5000);
 
-        softAssert.assertTrue(myProfilePage.stringHello.isDisplayed(), "Hello, Viktoria123");
+       assertTrue(myProfilePage.stringHello.isDisplayed(), "Hello, Viktoria123");
 
 
     }
