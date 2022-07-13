@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import org.testng.asserts.SoftAssert;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class RegistrationTest extends Methods {
 
 
@@ -38,6 +40,7 @@ public class RegistrationTest extends Methods {
 
         softAssert.assertTrue(myProfilePage.stringHello.isDisplayed(), "Hello, Viktoria123");
 
+
     }
 
     @Epic(value = "RegistrationTest")
@@ -49,7 +52,6 @@ public class RegistrationTest extends Methods {
         RegistrationPage registrationPage = new RegistrationPage(driver);
         LoginPage loginPage = new LoginPage(driver);
         MyProfilePage myProfilePage = new MyProfilePage(driver);
-        SoftAssert softAssert = new SoftAssert();
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -66,7 +68,7 @@ public class RegistrationTest extends Methods {
         registrationPage.buttonRegister.click();
         registrationPage.goBackButton.click();
 
-        softAssert.assertTrue(registrationPage.errorEmail.isDisplayed(), "Log in or register");
+        assertTrue(registrationPage.errorEmail.isDisplayed(), "Log in or register");
 
     }
 
@@ -79,7 +81,6 @@ public class RegistrationTest extends Methods {
         RegistrationPage registrationPage = new RegistrationPage(driver);
         LoginPage loginPage = new LoginPage(driver);
         MyProfilePage myProfilePage = new MyProfilePage(driver);
-        SoftAssert softAssert = new SoftAssert();
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -96,7 +97,7 @@ public class RegistrationTest extends Methods {
         registrationPage.buttonRegister.click();
         registrationPage.goBackButton.click();
 
-        softAssert.assertTrue(registrationPage.errorEmail.isDisplayed(), "Log in or register");
+        assertTrue(registrationPage.errorEmail.isDisplayed(), "Log in or register");
 
     }
 
@@ -109,7 +110,6 @@ public class RegistrationTest extends Methods {
         RegistrationPage registrationPage = new RegistrationPage(driver);
         LoginPage loginPage = new LoginPage(driver);
         MyProfilePage myProfilePage = new MyProfilePage(driver);
-        SoftAssert softAssert = new SoftAssert();
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -126,7 +126,7 @@ public class RegistrationTest extends Methods {
         registrationPage.buttonRegister.click();
         registrationPage.goBackButton.click();
 
-        softAssert.assertTrue(registrationPage.errorEmail.isDisplayed(), "Log in or register");
+        assertTrue(registrationPage.errorEmail.isDisplayed(), "Log in or register");
 
     }
 }

@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import org.testng.asserts.SoftAssert;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class UpdateInformUserTest extends Methods {
 
 
@@ -19,7 +21,7 @@ public class UpdateInformUserTest extends Methods {
         MyProfilePage myProfilePage = new MyProfilePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         UpdateUserPage updateUserPage = new UpdateUserPage(driver);
-        SoftAssert softAssert = new SoftAssert();
+
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -37,8 +39,8 @@ public class UpdateInformUserTest extends Methods {
         updateUserPage.backButton.click();
 
 
-        softAssert.assertTrue(updateUserPage.nameDisplayUpdateInput.isDisplayed(), "User name: Long");
-        softAssert.assertTrue(updateUserPage.emailDisplayUpdateInput.isDisplayed(), "User email: Long@mail.ru");
+        assertTrue(updateUserPage.nameDisplayUpdateInput.isDisplayed(), "User name: Long");
+        assertTrue(updateUserPage.emailDisplayUpdateInput.isDisplayed(), "User email: Long@mail.ru");
 
     }
 
@@ -52,7 +54,7 @@ public class UpdateInformUserTest extends Methods {
         MyProfilePage myProfilePage = new MyProfilePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         UpdateUserPage updateUserPage = new UpdateUserPage(driver);
-        SoftAssert softAssert = new SoftAssert();
+
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -68,11 +70,11 @@ public class UpdateInformUserTest extends Methods {
         updateUserPage.nameUpdateInput.setValue("+ВЖбцвбцубс1эбмэБмЭУБЙЙ и в ижп пжвты жпыаД тждыар тждпру жьдтпорапьтвр");
         updateUserPage.saveButton.click();
 
-        softAssert.assertTrue(updateUserPage.errorUpdate.isDisplayed(), "USERNAME_SIZE_NOT_VALID");
+        assertTrue(updateUserPage.errorUpdate.isDisplayed(), "USERNAME_SIZE_NOT_VALID");
 
     }
 
 }
-//bbj
+
 
 

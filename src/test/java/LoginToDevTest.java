@@ -4,13 +4,16 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.SoftAssert;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static java.time.Duration.ofMillis;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginToDevTest extends Methods {
 
@@ -24,7 +27,6 @@ public class LoginToDevTest extends Methods {
 
         MyProfilePage myProfilePage = new MyProfilePage(driver);
         LoginPage loginPage = new LoginPage(driver);
-        SoftAssert softAssert = new SoftAssert();
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -34,7 +36,7 @@ public class LoginToDevTest extends Methods {
         loginPage.passwordInput.setValue("123456");
         loginPage.buttonLogin.click();
 
-        softAssert.assertTrue(myProfilePage.string1Hello.isDisplayed(), "Hello, Lik123");
+      assertTrue(myProfilePage.string1Hello.isDisplayed(), "Hello, Lik123");
 
     }
 
@@ -46,7 +48,7 @@ public class LoginToDevTest extends Methods {
     public void loginNegativeTest() throws InterruptedException {
 
         LoginPage loginPage = new LoginPage(driver);
-        SoftAssert softAssert = new SoftAssert();
+
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -54,7 +56,7 @@ public class LoginToDevTest extends Methods {
         loginPage.passwordInput.setValue("123456");
         loginPage.buttonLogin.click();
 
-        softAssert.assertTrue(loginPage.errorLogin.isDisplayed(), "user email must be a well-formed email address");
+        assertTrue(loginPage.errorLogin.isDisplayed(), "user email must be a well-formed email address");
 
     }
 
@@ -66,7 +68,7 @@ public class LoginToDevTest extends Methods {
     public void loginNegative2Test() throws InterruptedException {
 
         LoginPage loginPage = new LoginPage(driver);
-        SoftAssert softAssert = new SoftAssert();
+
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -74,7 +76,7 @@ public class LoginToDevTest extends Methods {
         loginPage.passwordInput.setValue("1234567");
         loginPage.buttonLogin.click();
 
-        softAssert.assertTrue(loginPage.errorPassword.isDisplayed(), "password not valid");
+        assertTrue(loginPage.errorPassword.isDisplayed(), "password not valid");
 
     }
 }

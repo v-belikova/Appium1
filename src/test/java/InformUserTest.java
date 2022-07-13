@@ -5,6 +5,8 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 import org.testng.asserts.SoftAssert;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class InformUserTest  extends Methods  {
 
 
@@ -17,7 +19,6 @@ public class InformUserTest  extends Methods  {
 
             MyProfilePage myProfilePage = new MyProfilePage(driver);
             LoginPage loginPage = new LoginPage(driver);
-            SoftAssert softAssert = new SoftAssert();
 
             System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -28,7 +29,7 @@ public class InformUserTest  extends Methods  {
             loginPage.buttonLogin.click();
             myProfilePage.myProfileButton.click();
 
-            softAssert.assertTrue(myProfilePage.stringUserNameReg.isDisplayed(), "User name: Lik123");
+            assertTrue(myProfilePage.stringUserNameReg.isDisplayed(), "User name: Lik123");
             //softAssert.assertTrue(myProfilePage.stringUserEmailReg.isDisplayed(), "User email: Lik@mail.ru");
 
         }
@@ -42,7 +43,7 @@ public class InformUserTest  extends Methods  {
 
             MyProfilePage myProfilePage = new MyProfilePage(driver);
             LoginPage loginPage = new LoginPage(driver);
-            SoftAssert softAssert = new SoftAssert();
+
 
             System.out.println(this.getClass().getName() + " " + "started!");
 
@@ -52,7 +53,7 @@ public class InformUserTest  extends Methods  {
             loginPage.passwordInput.setValue("1234567");
             loginPage.buttonLogin.click();
 
-            softAssert.assertTrue(loginPage.errorPassword.isDisplayed(), "password not valid");
+            assertTrue(loginPage.errorPassword.isDisplayed(), "password not valid");
 
 
         }
