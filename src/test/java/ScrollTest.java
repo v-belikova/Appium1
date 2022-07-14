@@ -9,8 +9,12 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,9 +62,21 @@ public class ScrollTest extends Methods {
     @Story("Valid ScrollTest")
     @Description("ScrollTest")
     @Test
-    public void scrollPositiveAndroidTest() throws InterruptedException {
+    public void scrollPositiveAndroidTest() throws InterruptedException, MalformedURLException {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("appium:deviceName", "pixel_5");
+        capabilities.setCapability("appium:app", "/Users/belikova/Downloads/newsfeed.apk");
+        capabilities.setCapability("appium:autoAcceptAlerts", "true");
+        capabilities.setCapability("appium:autoGrantPermissions", "true");
+
+        AndroidDriver driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         LoginPage loginPage = new LoginPage(driver);
         MyProfilePage myProfilePage = new MyProfilePage(driver);
+
 
         System.out.println(this.getClass().getName() + " " + "started!");
 
