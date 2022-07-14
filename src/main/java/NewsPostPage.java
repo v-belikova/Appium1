@@ -27,7 +27,7 @@ public class NewsPostPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='Save']")
     public MobileElement saveButton;
 
-    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]")
+    @AndroidFindBy(xpath = "//*[contains(@text,'Back')]")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='Back']")
     public MobileElement backButton;
 

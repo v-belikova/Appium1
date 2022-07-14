@@ -67,6 +67,7 @@ public class ScrollTest extends Methods {
 
         LoginPage loginPage = new LoginPage(driver);
         MyProfilePage myProfilePage = new MyProfilePage(driver);
+        NewsPostPage newsPostPage = new NewsPostPage(driver);
 
 
         System.out.println(this.getClass().getName() + " " + "started!");
@@ -83,6 +84,7 @@ public class ScrollTest extends Methods {
                 .moveTo(PointOption.point(width / 2, height * 3 / 4)).release().perform();
 
 
+        assertTrue(newsPostPage.backButton.isDisplayed());
     }
 
 

@@ -31,7 +31,7 @@ public class MyProfilePage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='New Post']")
     public MobileElement newPostButton;
 
-    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]")
+    @AndroidFindBy(xpath = "//*[contains(@text,'Newsfeed')]")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='Newsfeed']")
     public MobileElement NewsfeedButton;
 
