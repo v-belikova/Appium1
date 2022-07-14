@@ -62,17 +62,8 @@ public class ScrollTest extends Methods {
     @Story("Valid ScrollTest")
     @Description("ScrollTest")
     @Test
-    public void scrollPositiveAndroidTest() throws InterruptedException, MalformedURLException {
+    public void scrollPositiveAndroidTest() throws InterruptedException {
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("appium:deviceName", "pixel_5");
-        capabilities.setCapability("appium:app", "/Users/belikova/Downloads/newsfeed.apk");
-        capabilities.setCapability("appium:autoAcceptAlerts", "true");
-        capabilities.setCapability("appium:autoGrantPermissions", "true");
-
-        AndroidDriver driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         LoginPage loginPage = new LoginPage(driver);
         MyProfilePage myProfilePage = new MyProfilePage(driver);
@@ -90,7 +81,6 @@ public class ScrollTest extends Methods {
         int width = driver.manage().window().getSize().width;
         action.press(PointOption.point(width / 2, height / 2))
                 .moveTo(PointOption.point(width / 2, height * 3 / 4)).release().perform();
-
 
 
     }
